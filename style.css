@@ -1,0 +1,158 @@
+/* Start Variables */
+:root {
+  --purple: hsl(257, 40%, 49%);
+  --magenta: hsl(300, 69%, 71%);
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--purple);
+  padding: 30px 35px;
+  background-image: url(images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: white;
+}
+h1 {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.4;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+/* End Global Rules */
+/* Start Mobile Screen */
+header,
+main,
+main .mockup {
+  margin-bottom: 65px;
+}
+header img {
+  width: 150px;
+}
+main {
+  text-align: center;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .mockup img {
+  width: 100%;
+}
+main .content p {
+  font-size: 1.1em;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+main .content .button {
+  background-color: white;
+  width: 225px;
+  padding: 12px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  box-shadow: 0 7.5px 7.5px #0000003D;
+  transition: background-color 0.2s;
+}
+main .content .button a {
+  color: var(--purple);
+  text-decoration: none;
+}
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 100px;
+  font-size: 1.8em;
+}
+footer a {
+  color: white;
+  transition: 0.2s;
+}
+/* End Mobile Screen */
+/* Start Desktop Screen */
+@media (min-width: 1300) {
+  body {
+    height: 800px;
+    display: grid;
+    padding: 50px 65px;
+    grid-template-rows: auto auto 75px;
+    background-image: url(images/bg-desktop.svg);
+    background-size: cover;
+  }
+  header {
+    grid-row: 1;
+    grid-column: span 2;
+  }
+  header img {
+    padding: 00px;
+    width: 225px;
+  }
+  main {
+    text-align: left;
+  }
+  main {
+    padding: 10px 0;
+    grid-row: 2;
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 55% 40%;
+    justify-content: space-between;
+    margin: 0;
+  }
+  .content {
+    height: fit-content;
+    align-items: flex-start;
+    padding-top: 60px;
+  }
+  main .content .button {
+    margin: 0;
+  }
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  main .mockup {
+    margin-bottom: 0;
+  }
+  main .content p {
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  main .content .button {
+    padding: 15px 0;
+    width: 200px;
+  }
+  footer {
+    grid-column: span 2;
+    grid-row: 3;
+    padding: 10px 0 30px 0;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2em;
+  }
+  footer a {
+    margin-right: 20px;
+  }
+}
+/* End Desktop Screen */
+/* Start Active States */
+main .content .button:hover {
+  background-color: var(--magenta);
+}
+main .content .button:hover a {
+  color: white;
+}
+footer a:hover {
+  color: #D656E6;
+}
+/* End Active States */
