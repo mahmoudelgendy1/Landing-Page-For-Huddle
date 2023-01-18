@@ -79,7 +79,7 @@ footer a {
 }
 /* End Mobile Screen */
 /* Start Desktop Screen */
-@media (min-width: 1300) {
+@media (min-width: 1300px) {
   body {
     height: 800px;
     display: grid;
